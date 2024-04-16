@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Rápida dos conceitos iniciais</title>
+</head>
+
+<body>
+
+    <div id="mensagem">
+        
+    </div>
+    
+    <!-- IMPORTA O TEU ARQUIVO OU CÓDIGO JS NO FINAL DO BODY -->
+    <script>
+
+        
+        let nomeDigitado = prompt("Digite seu nome");
+        console.log(`Olá ${nomeDigitado}!`); // TEMPLATE STRING!! 
+        
+        // window.alert(`Seja bem-vindo ao site, ${nomeDigitado}!`);
+        // window.alert("Seja bem-vindo ao site, " + nomeDigitado + "!");
+
+        // JANELA DE CONFIRMAÇÃO
+        // let respostaExcluir = confirm("Você realmente deseja excluir?");
+        // console.log(respostaExcluir, typeof(respostaExcluir));
+
+
+        // INTERAGINDO COM DOM
+        let divMensagem = document.getElementById("mensagem");
+        
+        // divMensagem.innerText = "Olá, " + nomeDigitado + "! Fui inserido pelo JS!";
+        // divMensagem.innerText = `Olá, ${nomeDigitado}! Fui inserido pelo JS`;
+
+        let linkImg = "https://http2.mlstatic.com/D_Q_NP_2X_848378-MLU74227130077_012024-T.webp";
+
+        divMensagem.innerHTML = `
+            <p>
+                Olá, ${nomeDigitado}! Fui inserido pelo JS
+            </p>
+            <img src="${linkImg}" />
+        `;
+
+
+        // CONVERSÃO DE STRING PARA NUMBER!!
+        let valorProduto = "10"; // string!!
+
+        // valorProduto = parseInt(valorProduto);
+        valorProduto = +valorProduto;
+        console.log(valorProduto, typeof(valorProduto));
+
+        
+    </script>
+</body>
+
+</html>
