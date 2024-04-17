@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+
+    <!-- 
+        Faça um programa para a leitura de quatro notas parciais de um aluno. O programa deve calcular a média alcançada pelo aluno e apresentar:
+        A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+        A mensagem "Em recuperação", se a média for entre cinco, incluindo o cinco, E sete;
+        A mensagem "Reprovado", se a média for menor que cinco. 
+    -->
+
+    <p class="mensagem"></p>
+
+    <script>
+
+        let notaA = +prompt("Digite a primeira nota: ");
+        let notaB = +prompt("Digite a segunda nota: ");
+        let notaC = +prompt("Digite a terceira nota: ");
+        let notaD = +prompt("Digite a quarta nota: ");
+
+        let media = (notaA + notaB + notaC + notaD) / 4;
+
+        let pMensagem = document.querySelector("p.mensagem");
+
+        if (media >= 7 && media <= 10) {
+            pMensagem.innerHTML = `O usuário foi Aprovado com nota <b>${media}</b>`;
+        } else if (media >= 5 && media < 7) {
+            pMensagem.innerHTML = `O usuário está de recuperação com nota ${media}`;
+        } else if (media >= 0 && media < 5) {
+            pMensagem.innerHTML = `O usuário foi reprovado com nota ${media}`;
+        } else {
+            pMensagem.innerHTML = "Notas inseridas inválidas";
+        }
+
+    </script>
+</body>
+
+</html>

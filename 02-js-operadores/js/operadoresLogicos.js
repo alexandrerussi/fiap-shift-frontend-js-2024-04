@@ -56,6 +56,7 @@ let aniversario = true;
 console.log(!chuva || sol || jogoBr || aniversario);
 
 
+// OPERADOR NOT (!)
 console.log(!sol);
 
 

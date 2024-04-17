@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 e 2 da Aula 2</title>
+</head>
+
+<body>
+
+    <!-- 
+        Elabore um programa que receba o nome do usuário e o seu gênero da seguinte forma:
+        [ M ] para masculino
+        [ F ] para feminino
+        [ O ] outro
+        [ N ] não responder
+        Exiba uma mensagem final da seguinte forma:
+        “Olá, Fulano! Você escolheu a seguinte opção de gênero: M” 
+    -->
+
+    <p class="mensagem"></p>
+
+    <script>
+        let nomeUsuario = prompt("Digite seu nome: ");
+        let genero = prompt("Digite seu gênero [M], [F], [O], [N]: ");
+
+        let pMensagem = document.querySelector("p.mensagem");
+
+        pMensagem.innerHTML = `Olá, ${nomeUsuario}! Você escolheu a seguinte opção de gênero: ${genero}`;
+
+        switch (genero) {
+            case "M": 
+                pMensagem.innerHTML = `Olá, ${nomeUsuario}! Seu gênero é masculino`;
+                break;
+            case "F":
+                pMensagem.innerHTML = `Olá, ${nomeUsuario}! Seu gênero é feminino`;
+                break;
+            case "O":
+                pMensagem.innerHTML = `Olá, ${nomeUsuario}! Seu gênero é outro que não masc. e fem.`;
+                break;
+            case "N":
+                pMensagem.innerHTML = `Olá, ${nomeUsuario}! Você decidiu não responder a pergunta`;
+                break;
+            default:
+                pMensagem.innerHTML = "Gênero inválido";
+        }
+    </script>
+</body>
+
+</html>
