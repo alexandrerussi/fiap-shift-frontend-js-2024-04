@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - Listas</title>
+</head>
+
+<body>
+
+    <div class="frutas"></div>
+
+    <script>
+
+        // PERCORRER ARRAYS
+
+        let frutas = ["Maçã", "Pera", "Morango", "Melancia", "Banana"];
+        console.log(frutas);
+
+        // frutas[index] = value
+        // frutas[0] = "Maçã"
+        // frutas[1] = "Pera"
+        // frutas[2] = "Morango"
+        // frutas[3] = "Melancia"
+        // frutas[4] = "Banana"
+
+        let qtdFrutas = frutas.length; // qtdFrutas = 5
+
+        // FOR CLÁSSICO -- FOR INDEXADO  =>>> frutas[index]
+
+        // for (let i = 0; i < qtdFrutas; i++) {
+        //     console.log(`Pos.: ${i} | Valor: ${frutas[i]} | Sintaxe: frutas[${i}]`);
+
+        //     let frutaElement = document.createElement("p");
+        //     frutaElement.innerHTML = `${frutas[i]}`;
+
+        //     let divFrutas = document.querySelector(".frutas");
+        //     divFrutas.appendChild(frutaElement);
+        // }
+
+
+        // FOR IN ==> acessa a posição de uma lista de forma dinâmica
+        // for (let posicao in frutas) {
+        //     console.log(posicao, frutas[posicao]);
+
+        //     let frutaElement = document.createElement("p");
+        //     frutaElement.innerHTML = `${frutas[posicao]}`;
+
+        //     let divFrutas = document.querySelector(".frutas");
+        //     divFrutas.appendChild(frutaElement);
+        // }
+
+        // FOR OF ==> acessa cada um dos valores de uma lista de forma dinâmica
+        // for (let fruta of frutas) {
+        //     console.log(frutas.indexOf(fruta), fruta);
+
+        //     let frutaElement = document.createElement("p");
+        //     frutaElement.innerHTML = fruta;
+
+        //     let divFrutas = document.querySelector(".frutas");
+        //     divFrutas.appendChild(frutaElement);
+        // }
+
+        // RECUPEREI DO MEU BANCO DE DADOS...
+        let gradeProdutos = [
+            ["Nome 1", 10, "Descrição 1", "https://s.mlcdn.com.br/banner/campanhas/mundoportateis_iconehomeprincipal_hotlinkv3.png"],
+            ["Nome 2", 20, "Descrição 2", "https://s.mlcdn.com.br/banner/campanhas/mundoinds_hotlink_cozinha.png"],
+            ["Nome 3", 30, "Descrição 3", "https://s.mlcdn.com.br/banner/campanhas/hotlink_brinquedos_011223.png"],
+        ];
+
+        console.table(gradeProdutos);
+
+        // FOR ENCADEADO
+        for (let linha = 0; linha < gradeProdutos.length; linha++) {
+            // console.log(gradeProdutos[linha][0]);
+
+            for (let coluna = 0; coluna < gradeProdutos[linha].length; coluna++) {
+                console.log(gradeProdutos[linha][coluna]);
+            }
+            console.log(" ");
+            console.log(" ");
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - Listas</title>
+</head>
+
+<body>
+
+    <script>
+        
+        // ARRAYS SÃO LISTAS!!!!
+        // ARMAZENAM DIVERSOS DADOS DIFERENTOS
+        // QTOS DADOS VC QUISER
+
+        // 1ª FORMA DE DECLARAR ARRAYS
+        let lista1 = new Array("elemento1", "elemento2", "elemento3");
+        // console.log(lista1);
+
+        // 2ª FORMA DE DECLARAR ARRAYS
+        let lista2 = ["elementoA", "elementoB", "elementoC"];
+        // console.log(lista2);
+
+        // LISTA FRUTAS ==> LISTA DE STRINGS!!
+        let frutas = ["Maçã", "Pera", "Morango", "Melancia"];
+        console.log(frutas);
+
+        // TAMANHO DE UMA LISTA ==> LENGTH
+        let qtdFrutas = frutas.length;
+        console.log(`Quantidade de frutas na lista é: ${qtdFrutas}`);
+
+        // frutas[INDICE/POSICAO] = VALOR
+        // frutas[index] = value
+        // frutas[0] = "Maçã"
+        // frutas[1] = "Pera"
+        // frutas[2] = "Morango"
+        // frutas[3] = "Melancia"
+
+        // console.log(frutas[3]);
+
+
+        // LISTA NÚMEROS DA MEGA ==> LISTA DE NUMBERS!!
+        let numSorteados = [3, 10, 11, 26, 32, 56];
+        // console.log(numSorteados[3]);
+
+        let lista = [12, "Texto", true, false, 10.3, [2, 5], [true, false]];
+        // console.log(lista);
+        
+        // console.log(lista[5]);
+
+        // console.log(lista[5][1]);
+
+        // GRADE DE PRODUTOS == MATRIZ == TABELA
+        let gradeProdutos = [
+            ["Nome 1", 5.20, "Descrição 1"], // linha 0
+            ["Nome 2", 1.20, "Descrição 2"], // linha 1
+            ["Nome 3", 2.20, "Descrição 3"]  // linha 2
+        ];
+
+        // console.table(gradeProdutos);
+        
+        // gradeProdutos[linha]
+        // console.log(gradeProdutos[0]);
+        // console.log(gradeProdutos[1]);
+        // console.log(gradeProdutos[2]);
+
+        console.log(" ");
+        console.log(" --- ");
+        console.log(" ");
+
+        // gradeProdutos[linha][coluna]
+        // console.log(gradeProdutos[0][2]);
+
+    </script>
+
+</body>
+
+</html>

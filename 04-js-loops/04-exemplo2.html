@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ▪ Dado um número inteiro positivo n, escreva um algoritmo que imprime 
+        // a tabuada de n até o valor 10.
+
+        let n;
+
+        do {
+            n = +prompt("Digite um número positivo n");
+        } while (n < 0);
+
+        let i = 0;
+        while (i <= 10) {
+            console.log(`${n} x ${i} = ${n*i}`);
+            i++;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+
+<body>
+
+    <script>
+        
+        // FOR É UMA OUTRA ESTRUTURA DE REPETIÇÃO...
+
+        /// A GRANDE DIFERENÇA ENTRE FOR E WHILE É QUE:
+
+        // UTILIZAMOS O WHILE QUANDO NÃO SABEMOS QUANTAS VEZES O CÓDIGO IRÁ REPETIR
+        // POR EX.: QUANDO O USUÁRIO TIVER QUE DIGITAR UMA INFORMAÇÃO...
+
+        // UTILIZAMOS O FOR QUANDO SABEMOS QUANTAS VEZES REPETIR
+
+
+        // SINTAXE BÁSICA DO FOR ==>
+
+        // for (let contador = 0; contador < 10; contador++) {
+        //     console.log(contador);
+        // }
+
+
+        // SOLICITA PARA USUÁRIO DIGITAR A QUANTIDADE DE PRODUTOS QUE SERÁ EXIBIDA
+
+        // qtdProdutos é o limitador de qtas vezes o FOR irá repetir
+        let qtdProdutos = +prompt("Digite a quantidade de produtos que deseja exibir: ");
+
+        for (let i = 0; i < qtdProdutos; i++) {
+            console.log(`Produto ${i}`);
+
+            // criar tags <p> de forma dinâmica!!!
+            let pProduto = document.createElement("p");
+            console.log(pProduto);
+
+            pProduto.innerHTML = `Produto ${i+1}`;
+            console.log(pProduto);
+
+            document.body.appendChild(pProduto);
+        }
+
+    </script>
+
+</body>
+
+</html>

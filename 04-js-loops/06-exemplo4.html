@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ▪ Escreva um programa que dadas duas notas escolares de 0 a 10 
+        // calcula a média aritmética entre elas.
+
+        let notaA, notaB;
+
+        do {
+            notaA = +prompt("Digite a primeira nota entre 0 e 10");
+        } while (notaA < 0 || notaA > 10);
+
+        do {
+            notaB = +prompt("Digite a segunda nota entre 0 e 10");
+        } while (notaB < 0 || notaB > 10);
+
+        // DESAFIO: SERÁ QUE EU POSSO JUNTAR A REQUISIÇÃO DAS NOTAS EM UM (1) DO/WHILE?
+
+        let media = (notaA + notaB) / 2;
+
+        console.log(`A média é: ${media}`);
+
+    </script>
+
+</body>
+
+</html>

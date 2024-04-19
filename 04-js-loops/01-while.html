@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While / Desafio</title>
+</head>
+
+<body>
+
+    <script>
+        // let i = 0;
+
+        // while (i < 5) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // DESAFIO 1: COMO EU FAÇO PARA IR DE 10 ATÉ 0
+
+        // let i = 10;
+
+        // while (i >= 0) {
+        //     console.log(i);
+        //     i--;
+        // }
+
+        // DESAFIO 2: COMO VERIFICAR QUE O USUÁRIO DIGITOU ALGO ERRADO E SOLICITAR NOVAMENTE
+
+        // let num = +prompt("Adivinhe um número: ");
+
+        // while (num !== 7) {
+        //     num = +prompt("Tente novamente... Adivinhe um número");
+        // }
+
+        // console.log("Parabéns");
+
+        let nome = prompt("Digite seu nome");
+
+        while (nome == "") {
+            nome = prompt("ERRO! Digite seu nome")
+        }
+
+        console.log(`Oi, ${nome}!`);
+
+
+    </script>
+
+</body>
+
+</html>
