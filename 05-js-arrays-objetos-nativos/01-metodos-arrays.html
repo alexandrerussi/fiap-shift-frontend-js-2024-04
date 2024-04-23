@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos básicos de Array</title>
+</head>
+
+<body>
+
+    <script>
+
+        // PRINCIPAIS MÉTODOS DE ARRAY!!
+
+        let frutas = ["Maçã", "Pera", "Banana", "Melancia"];
+        console.log(frutas);
+
+        // INSERIR NOVO ELEMENTO NO FINAL DO ARRAY
+        frutas.push("Abacaxi");
+        console.log(frutas);
+
+        // INSERIR NOVO ELEMENTO NO COMEÇO DO ARRAY
+        frutas.unshift("Uva");
+        console.log(frutas);
+
+        // REMOVER O ÚLTIMO ELEMENTO NO FINAL DO ARRAY
+        frutas.pop();
+        frutas.pop();
+        console.log(frutas);
+
+        // REMOVER O PRIMEIRO ELEMENTO DO ARRAY
+        frutas.shift();
+        frutas.shift();
+        console.log(frutas);
+
+        // SE EU QUISER... ADICIONAR NOVOS ELEMENTOS NO ARRAY
+        // SÓ QUE... ESSES ELEMENTOS ESTÃO EM UMA NOVA LISTA
+
+        let frutasNovas = ["Carambola", "Mexerica"];
+        console.log(frutasNovas);
+
+        // EU PRECISO CONCATENAR ESSAS DUAS LISTAS... PARA ISSO:
+        let frutasJuntas = frutas.concat(frutasNovas); // o retorno é a lista concatenada => armazena na variável
+        console.log(frutasJuntas);
+
+        console.log(" ");
+        console.log(" ");
+
+        frutas.push("Melão");
+        frutas.push("Uva");
+        console.log(frutas);
+
+        console.log("EXEMPLO SLICE");
+
+        let retornoSlice = frutas.slice(0, 2);
+        console.log(retornoSlice); // é a fatia que foi cortada do array principal!!!
+        console.log(frutas);
+
+        console.log(" ");
+        console.log(" ");
+
+        console.log("EXEMPLO SPLICE");
+
+        // ['Pera', 'Banana', 'Melão', 'Uva']
+
+        // frutas[0] = "Pera"
+        // frutas[1] = "Banana"     ==> retornoSplice[]
+        // frutas[2] = "Melão"
+        
+        // frutas[3] = "Uva"  ==> frutas[]
+
+        // let retornoSplice = frutas.splice(0, 3, "X", "Y", "Z", 123); // aqui sim conta os elementos!!
+        let retornoSplice = frutas.splice(2, 1, "Batata");
+        console.log(retornoSplice);
+        console.log(frutas);
+
+
+    </script>
+
+</body>
+
+</html>

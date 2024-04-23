@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Nativos de JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        // onde estudar tudo isso?
+        // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+        // ----------------------------------------
+        // OBJETO MATH
+        // ----------------------------------------
+
+        let valor = 2.999999;
+
+        // MÉTODOS DE MATH
+        // console.log(Math.floor(valor)); // arredonda pra baixo
+        // console.log(Math.round(valor)); // arredonda seguindo a regra do 0.5
+        // console.log(Math.ceil(valor)); // arrreonda para cima
+
+        // PROPRIEDADE DE MATH
+        // console.log(Math.PI); // constante
+
+        // ----------------------------------------
+        // NÚMEROS ALEATÓRIOS / SORTEADOS
+        // ----------------------------------------
+
+        // let numAleatorio = Math.random();
+        // console.log(`numAleatorio = ${numAleatorio}`);
+
+        // let numSort10 = numAleatorio * 40; // nunca será 1 * 10 == pq só sorteia de 0 até 0.999999999 
+        // console.log(`numAleatorio * 10 = ${numSort10}`);
+
+        // let numSortRound = Math.floor(numSort10); // entre 0 e 9 ==> soma +1 ==> entre 1 e 10
+        // console.log(`Num sorteado arredondado = ${numSortRound}`); // minimo é 1 e o maximo é 10
+
+        // let minimo = 10;
+        // let maximo = 50;
+
+        // ----------------------------------------
+        // OBJETOS NATIVOS DE STRING
+        // ----------------------------------------
+
+        let nome = "AlexAndre";
+
+        // nome[0] = "A"
+        // nome[1] = "l"
+        // nome[2] = "e"
+
+        // let nomeLower = nome.toLowerCase(); // COLOCANDO EM MINÚSCULO
+        // console.log(nomeLower);
+
+        // let nomeUpper = nome.toUpperCase(); // COLOCANDO EM MAIÚSCULO
+        // console.log(nomeUpper);
+
+        // console.log(nome.replace("A", "B"));
+
+        // let frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+        // let fraseSemEspaco = frase.replace(" ", "");
+        // console.log(fraseSemEspaco);
+
+        // let fruta = "Banana";
+        
+        // fruta[0] = "B"
+        // fruta[1] = "a"
+
+        // console.log(fruta.indexOf("a"));
+        // console.log(fruta.charAt(0));
+
+
+        // let faculdade = "FIAP Tecnologia";
+        // console.log(faculdade);
+
+        // console.log(faculdade.slice(5));
+        // console.log(faculdade.slice(5, 8));
+
+        // console.log(faculdade.split(" ")); // dados csv tem um poder grande!! (,)
+
+
+        // ----------------------------------------
+        // OBJETOS NATIVOS DE DATA
+        // ----------------------------------------
+
+        // 0 DOM
+        // 1 SEG
+        // 2 TER
+        // 3 QUA
+        // 4 QUI
+        // 5 SEX
+        // 6 SAB
+
+        const DATA_ATUAL = new Date();
+        console.log(DATA_ATUAL);
+        console.log(DATA_ATUAL.getFullYear());
+        console.log(DATA_ATUAL.getDay());
+
+        let diaConsulta = 4; // quinta!
+        
+        if (DATA_ATUAL.getDay() == diaConsulta) {
+            console.log("ALERTA: HOJE É O DIA DA SUA CONSULTA!");
+            console.log("SISTEMA DISPARA UM SMS");
+        }
+
+
+        // 0 + 1 = 1 => JAN
+        // 1 + 1 = 2 => FEV
+        // 2 + 1 = 3 => MAR
+        // 3 + 1 = 4 => JAN
+
+        const MES = DATA_ATUAL.getMonth() + 1;
+        console.log(MES);
+
+        // let semestre;
+
+        // if (MES <= 6) {
+        //     semestre = "Primeiro Semestre";
+        // } else {
+        //     semestre = "Segundo Semestre";
+        // }
+
+        // console.log(semestre);
+
+
+        // IF TERNÁRIO
+
+        let semestre = MES <= 6 ? "Primeiro Semestre" : "Segundo Semestre";
+        console.log(semestre);
+
+
+    </script>
+
+</body>
+
+</html>

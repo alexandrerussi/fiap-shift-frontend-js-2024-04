@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+
+<body>
+
+    <div class="classificacao"></div>
+
+    <script>
+
+        // Faça um programa que receba o ano de nascimento da pessoa e retorne:
+        // ▪ Se o voto é obrigatório este ano;
+        // ▪ Se o voto é opcional este ano;
+        // ▪ Se o voto é proibido este ano.   
+
+        let anoNascimento = +prompt("Digite o ano de nascimento: ");
+        
+        // pega a data atual e salva na variável DATA_ATUAL
+        const DATA_ATUAL = new Date();
+        const ANO_ATUAL = DATA_ATUAL.getFullYear();
+
+        let idade = ANO_ATUAL - anoNascimento;
+        console.log(idade);
+
+        let divClassificacao = document.querySelector(".classificacao");
+        let pMsg = document.createElement("p"); // <p></p>
+
+        let status;
+
+        if ((idade >= 16 && idade < 18) || idade > 70) {
+            
+            console.log(`Você tem ${idade} anos. Logo, seu voto é opcional.`);
+            pMsg.innerHTML = `Você tem ${idade} anos. Logo, seu voto é <strong>opcional</strong>.`;
+
+        } else if (idade < 16) {
+
+            console.log(`Você tem ${idade} anos. Logo, seu voto é proibido.`);
+            pMsg.innerHTML = `Você tem ${idade} anos. Logo, seu voto é <strong>proibido</strong>.`;
+
+        } else {
+            
+            console.log(`Você tem ${idade} anos. Logo, seu voto é obrigatório.`);
+            pMsg.innerHTML = `Você tem ${idade} anos. Logo, seu voto é <strong>obrigatório</strong>.`;
+
+        }
+
+        divClassificacao.appendChild(pMsg);
+
+        // console.log(pMsg);
+
+
+    </script>
+
+</body>
+
+</html>
