@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+
+    <script>
+
+        // -----------------------------------------------
+        // PARTE 1 - FUNÇÕES SEM PARÂMETROS E SEM RETORNO
+        // -----------------------------------------------
+
+        // DECLARAR UMA FUNÇÃO
+        // function saudacao() {
+        //     console.log("Seja bem-vindo");
+        // }
+
+        // CHAMAR A MINHA FUNÇÃO
+        // saudacao(); 
+
+
+        // -----------------------------------------------
+        // PARTE 2 - FUNC QUE SÓ EXECUTA ALGO -- N TEM PARAM. E N RETORNO
+        // -----------------------------------------------
+
+        // function saudacao() {
+        //     console.log("Seja bem-vindo");
+
+        //     let nome = prompt("Digite seu nome: ");
+        //     let idade = +prompt("Digite sua idade: ");
+
+        //     if (idade >= 18) {
+        //         console.log(`Olá, ${nome}! Você é maior de idade!`);
+        //     } else {
+        //         console.log(`Olá, ${nome}! Você é menor de idade!`);
+        //     }
+        // }
+
+        // saudacao();
+
+
+
+        // -----------------------------------------------
+        // PARTE 3 - FUNÇÕES COM PARÂMETROS E SEM RETORNO
+        // -----------------------------------------------
+
+        // function saudacaoComArgs(nome, idade, teste=2) {
+        //     console.log(`Seja bem-vindo, ${nome}! Você tem ${idade} anos.`);
+        //     console.log(teste);
+        // }
+
+        // saudacaoComArgs("Pedrinho", 17);
+        // saudacaoComArgs("Maria Eduarda", 19);
+        // saudacaoComArgs("Breno", 50);
+
+        // let nomeDigitado = prompt("Digite seu nome: ");
+        // let idadeDigitada = +prompt("Digite sua idade");
+
+        // saudacaoComArgs(nomeDigitado, idadeDigitada);
+
+
+
+        // -----------------------------------------------
+        // PARTE 4 - FUNÇÕES SEM PARÂMETROS E COM RETORNO
+        // -----------------------------------------------
+
+        // function retornoTexto() {
+        //     return "Texto";
+        // }
+
+        // let textoRetornado = retornoTexto();
+        // console.log(textoRetornado);
+
+
+        // function sortearNumero() {
+        //     return Math.round(Math.random() * 10);
+        // }
+
+        // let numSorteado = sortearNumero();
+        // console.log(`Num sorteado: ${numSorteado}`);
+
+        // let numSorteado2 = sortearNumero();
+        // console.log(`Num sorteado 2: ${numSorteado2}`);
+
+
+        // -----------------------------------------------
+        // PARTE 5 - FUNÇÕES COM PARÂMETROS E COM RETORNO
+        // -----------------------------------------------
+
+        // function somar(a, b) {
+        //     let soma = a + b;
+        //     return soma;
+        // }
+
+        // let resultado = somar(1, 2);
+        // console.log(resultado);
+
+        // ---------------
+
+        // function saudacao(nome) {
+        //     return `Oi, ${nome}!`;
+        // }
+
+        // let nomeDig = prompt("Digite seu nome: ");
+        
+        // let retornoSaudacao = saudacao(nomeDig);
+        // console.log(retornoSaudacao);
+
+
+        // ---------------
+
+        // PEDIR PARA O USUARIO DIGITAR O INTERVALO DE NUMEROS ALEATÓRIOS QUE ELE QUER GERAR
+
+        function sorteiaNumeros(min, max) {
+            return Math.round((Math.random() * (max - min)) + min);
+        }
+
+        let minDigitado = +prompt("Digite o mínimo: ");
+        let maxDigitado = +prompt("Digite o máximo: ");
+
+        let numSorteado = sorteiaNumeros(minDigitado, maxDigitado);
+        console.log(numSorteado);
+
+
+    </script>
+
+</body>
+
+</html>

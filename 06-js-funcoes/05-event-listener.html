@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+
+<body>
+
+    <button id="meuBotao">Botão Legal</button>
+    <button onclick="saudacao()">Outro botão</button>
+
+    <button id="alteraMsg">Alterar texto</button>
+    <p id="msg">deste cara aqui</p>
+
+    <button id="criaElemento">Criar elemento</button>
+
+    <script>
+
+        document.getElementById("meuBotao").addEventListener("click", function () {
+            alert("Botão clicado!");
+        });
+
+        function saudacao() {
+            alert("Seja bem-vindo");
+        }
+
+        // ESCUTANDO O CLIQUE DO BOTÃO DE ALTERAR MSG
+        // QUANDO ESCUTAR O CLIQUE, EXECUTA O QUE TEM DENTRO DA ARROW FUNCTION ANONIMA
+        document.getElementById("alteraMsg").addEventListener("click", () => {
+            // ALTERA O TEXTO DO p#msg
+            let pMsg = document.getElementById("msg");
+            pMsg.textContent = "Texto foi alterado!!";
+        });
+
+
+        document.getElementById("criaElemento").addEventListener("click", () => {
+            let novoElemento = document.createElement("h1");
+            novoElemento.textContent = "Elemento adicionado";
+            document.body.appendChild(novoElemento);
+        });
+
+    </script>
+
+</body>
+
+</html>

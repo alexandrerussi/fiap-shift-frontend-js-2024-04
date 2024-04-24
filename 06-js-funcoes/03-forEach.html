@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach - Funções anônimas</title>
+</head>
+
+<body>
+
+    <script>
+
+        let lista = [10, 20, 30, 40];
+        console.log(lista);
+
+        // FOR EACH É UMA OUTRA MANEIRA DE PERCORRER ARRAYS
+        // PARA CADA...
+
+        // function funcArray(valor, indice, lista) {
+        //     console.log(`valor: ${valor} | indice: ${indice} | z: ${lista}`);
+        // }
+
+        // lista.forEach(funcArray);
+
+
+        // -----------------------------
+        // FUNÇÃO ANÔNIMA
+        // -----------------------------
+
+        // lista.forEach(function (v, i, arr) {
+        //     console.log(`value: ${v} | index: ${i} | array: ${arr}`);
+        // });
+
+
+        // -----------------------------
+        // FUNÇÃO ANÔNIMA com ARROW FUNCTION
+        // -----------------------------
+
+        lista.forEach((v, i, arr) => {
+            console.log(`value: ${v} | index: ${i} | array: ${arr}`);
+        });
+
+
+        // -----------------------------
+        // EXEMPLO RÁPIDO
+        // -----------------------------
+
+        lista.forEach((value) => {
+            let h2Numero = document.createElement("h2");
+            h2Numero.innerHTML = value;
+            document.body.appendChild(h2Numero);
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest parameters</title>
+</head>
+
+<body>
+
+    <script>
+
+        function soma(...numeros) {
+            let total = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                total += numeros[i];
+            }
+            return total;
+        }
+
+
+        let resultado = soma(1, 2, 3, 4, 5, 6, 7);
+        console.log(resultado); // Saída: 21
+        
+    </script>
+
+</body>
+
+</html>

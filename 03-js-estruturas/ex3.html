@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 Aula 3</title>
+</head>
+<body>
+    
+
+    <script>
+        let salarioAtual = +prompt("Digite o salário atual:");
+        console.log(salarioAtual);
+
+        let reajuste;
+
+        if (salarioAtual <= 280) {
+            reajuste = 0.2; // 20/100 = 20% = 0.2 --> reajuste
+        } else if (salarioAtual <= 700) {
+            reajuste = 0.15;
+        } else if (salarioAtual <= 1500) {
+            reajuste = 0.10;
+        } else {
+            reajuste = 0.05;
+        }
+
+
+        let valorAumento = salarioAtual * reajuste;
+        let novoSalario = salarioAtual + valorAumento;
+
+        console.log(`Salário antes do reajuste: R$ ${salarioAtual}`);
+        console.log(`Percentual do aumento: ${reajuste*100}%`);
+        console.log(`Valor do aumento: R$ ${valorAumento}`);
+        console.log(`Novo salário com aumento: R$ ${novoSalario}`);
+
+        // COMO PASSAR ISSO SÓ UTILIZANDO ELEMENTOS DE TELA?
+
+    </script>
+
+</body>
+</html>

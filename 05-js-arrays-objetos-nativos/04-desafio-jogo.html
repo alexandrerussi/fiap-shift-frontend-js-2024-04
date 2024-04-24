@@ -9,7 +9,7 @@
 
 <body>
 
-    <div class="classificacao"></div>
+    <div class="resposta"></div>
 
     <script>
 
@@ -17,6 +17,31 @@
         // 10 e 50 e peça para o usuário tentar descobrir qual foi o número escolhido pelo 
         // computador. O programa deverá escrever na tela se o usuário venceu ou perdeu.
 
+        let min = 10;
+        let max = 50;
+
+        // sortear entre 0 e 40 => o 40 é max - min
+        // mas eu quero entre 10 e 50
+        // se eu tenho de 0 => 40, posso somar +10
+        // então, vou ter o intervalo de 10 ==> 50
+        // agora, preciso arredondar o valor => Math.round()
+
+        let numAleatorio = Math.round((Math.random() * (max - min)) + min);
+
+        let numUsuario = +prompt("Tente adivinhar o número sorteado entre 10-50");
+
+        let status;
+        if (numAleatorio == numUsuario) {
+            status = "Venceu";
+        } else {
+            status = "Perdeu";
+        }
+
+        let divResposta = document.querySelector(".resposta");
+        let pResposta = document.createElement("p");
+        pResposta.innerHTML = `Número sorteado: ${numAleatorio} | Palpite: ${numUsuario} | Você <b>${status}!</b>`
+
+        divResposta.appendChild(pResposta);
 
     </script>
 
