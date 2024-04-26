@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+
+    <link rel="stylesheet" href="03-style.css">
+</head>
+
+<body>
+
+    <!-- <div class="card">
+        <p>Joaquim</p>
+        <p>20</p>
+        <p>joaquim@email.com</p>
+    </div> -->
+
+    <div class="container">
+        <div class="card">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+            <h2>Nome</h2>
+            <h3>Idade</h3>
+            <p>Email</p>
+        </div>
+    </div>
+
+    <script>
+
+        let pessoa = {
+            nome: "Joaquim",
+            idade: 20,
+            email: "joaquim@email.com",
+            linkImg: "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+        }
+
+        console.log(pessoa);
+        console.log(pessoa.nome);
+        console.log(pessoa["nome"]);
+        console.log(" ");
+
+        // let card = document.createElement("div");
+        // card.classList = "card";
+        
+
+        // for (let chave in pessoa) {
+        //     let pElement = document.createElement("p");
+        //     pElement.innerHTML = pessoa[chave];
+        //     card.appendChild(pElement);
+
+        //     console.log(`${chave}: ${pessoa[chave]}`);
+        // }
+
+        // document.body.appendChild(card);
+
+        let pessoa2 = {
+            nome: "Maria",
+            idade: 32,
+            email: "maria@email.com",
+            linkImg: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+        }
+
+        // ARRAY DE OBJETOS
+        let pessoas = [pessoa, pessoa2];
+
+        console.log(pessoas);
+
+        // PERCORRER O ARRAY DE OBJETOS
+        
+        let divContainer = document.querySelector("div.container");
+
+        for (let pessoa of pessoas) {
+            let card = document.createElement("div");
+            card.className = "card";
+
+            let img = document.createElement("img");
+            img.src = pessoa.linkImg;
+
+            let h2Nome = document.createElement("h2");
+            h2Nome.innerHTML = pessoa.nome;
+
+            let h3Idade = document.createElement("h3");
+            h3Idade.innerHTML = pessoa.idade;
+
+            let pEmail = document.createElement("p");
+            pEmail.innerHTML = pessoa.email;
+
+            // colocando img, h2, h3 e p dentro da div.card
+            card.appendChild(img);
+            card.appendChild(h2Nome);
+            card.appendChild(h3Idade);
+            card.appendChild(pEmail);
+
+            // colocando card dentro da tag div.container
+            divContainer.appendChild(card);
+        }
+
+        pessoas.forEach(pessoa => {
+            console.log(pessoa.nome);
+        })
+        
+    </script>
+
+</body>
+
+</html>

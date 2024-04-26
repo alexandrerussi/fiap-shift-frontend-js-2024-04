@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        // FACTORY FUNCTION -- FUNÇÃO QUE CRIA OBJETOS
+
+        function criarUsuario(id, nome, email, senha) {
+            return {
+                id,
+                nome,
+                email,
+                senha
+            }
+        }
+
+        // PARECE MUITO COM UM CONSTRUTOR DE UMA CLASSE....
+        // PITADA DE ORIENTAÇÃO A OBJETOS
+        
+        let usuario1 = criarUsuario("1", "Fulano", "fulano@email.com", "fulano123");
+        console.log(usuario1);
+
+        let usuario2 = criarUsuario("2", "Ciclano", "ciclano@email.com", "ciclano123");
+        console.log(usuario2);
+
+        let usuarios = [];
+        usuarios.push(usuario1);
+        usuarios.push(usuario2);
+
+        console.log(usuarios);
+
+        usuarios.forEach(user => {
+            let h1 = document.createElement("h1");
+            h1.innerHTML = user.nome;
+
+            document.body.appendChild(h1);
+        })
+
+
+        
+    </script>
+
+</body>
+
+</html>

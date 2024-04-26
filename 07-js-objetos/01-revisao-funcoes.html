@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão de Função</title>
+</head>
+
+<body>
+
+    <input type="number" placeholder="Digite o numerador" id="input-numerador">
+    <input type="number" placeholder="Digite o denominador" id="input-denominador">
+    <button id="btn-dividir">Dividir</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        // DECLARAÇÃO "CLÁSSICA" DA FUNÇÃO
+        function dividir(numerador, denominador) {
+            if (denominador != 0) {
+                return numerador / denominador;
+            } else {
+                return "ERRO! Você não pode dividir por zero.";
+            }
+        }
+
+        // DECLARAÇÃO COM ARROW FUNCTION
+
+        // let dividirArrow = (numerador, denominador) => numerador / denominador;
+
+        // let dividirArrow = (numerador, denominador) => {
+        //     if (denominador != 0) {
+        //         return numerador / denominador;
+        //     } else {
+        //         return "ERRO! Você não pode dividir por zero.";
+        //     }
+        // }
+
+        // JUNÇÃO DA ARROW FUNCTION COM IF TERNÁRIO
+        
+        // let dividirArrow = (numerador, denominador) => {
+        //     return (denominador != 0) ? numerador/denominador : "ERRO! Divisão por zero.";
+        // }
+
+        let dividirArrow = (numerador, denominador) => (denominador != 0) ? numerador/denominador : "ERRO! Divisão por zero.";
+
+
+        // ESCUTANDO O EVENTO DE CLIQUE DO BOTÃO DIVIDIR
+        document.getElementById("btn-dividir").addEventListener("click", function () {
+            let numeradorDigitado = +document.getElementById("input-numerador").value;
+            let denominadorDigitado = +document.getElementById("input-denominador").value;
+
+            // CHAMADA DA FUNÇÃO DIVIDIR
+            let resultado = dividirArrow(numeradorDigitado, denominadorDigitado);
+            
+            document.getElementById("resultado").innerHTML = resultado;
+        });
+
+
+    </script>
+
+</body>
+
+</html>
