@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Aula 6</title>
+
+    <style>
+        * {
+            font-size: 1.5rem;
+        }
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+        div label {
+            display: block;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Crie uma página web que permita ao usuário verificar se um número digitado é par ou ímpar. A 
+        página deve incluir:
+            ▪ Um campo de entrada para o usuário inserir um número.
+            ▪ Um botão que, ao ser clicado, verifica se o número é par ou ímpar.
+            ▪ Uma área de texto onde a mensagem "O número é par." ou "O número é ímpar." será 
+                exibida, baseando-se no número inserido.
+        
+        Utilize HTML para estruturar a página, CSS para estilizá-la, e JavaScript para adicionar a lógica 
+        de verificação do número e a manipulação do DOM para exibir a mensagem.
+
+    -->
+
+    <h1>Par ou Impar</h1>
+    <div>
+        <label for="input-numero">Digite um número:</label>
+        <input type="number" name="input-numero" id="input-numero">
+    </div>
+    <button id="btn-verifica">Verificar</button>
+    <h2 id="resultado"></h2>
+
+    <script src="ex5.js"></script>
+</body>
+
+</html>
