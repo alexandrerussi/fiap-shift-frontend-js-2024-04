@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Simples</title>
+
+    <style>
+        * {
+            font-size: 1.3rem;
+        }
+
+        body {
+            background-color: #262626;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Produtos</h1>
+
+    <select name="filtroCategoria" id="filtroCategoria">
+        <option value="todos">Todos</option>
+        <option value="eletronicos">Eletrônicos</option>
+        <option value="livros">Livros</option>
+        <option value="vestuario">Vestuário</option>
+    </select>
+
+    <ul id="listaProdutos">
+    </ul>
+
+    <h2>Total do carrinho: <span id="totalCarrinho">R$0</span></h2>
+
+    
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
